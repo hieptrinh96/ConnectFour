@@ -6,9 +6,9 @@ const arrOfCoords = [];
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let turn = 1;
 let winner = false;
 let playerOne = 'red';
+let turn = playerOne;
 let playerTwo = 'yellow';
 
 /*------------------------ Cached Element References ------------------------*/
@@ -28,34 +28,28 @@ const message = document.getElementById('message')
 // create a function to 
 
 init();
-
+console.log(arrOfCoords.length)
 function init() {
-
   for (let i = 0; i < row; i++) {
-
     for (let j = 0; j < column; j++) {
-
       const divElement = document.createElement('div');
       divElement.classList.add('cell');
       divElement.id = `${i}, ${j}`;
+      arrOfCoords.push(divElement.id)
       divElement.addEventListener('click', renderCircles)
       board.appendChild(divElement);
     }
-
   }
-
 }
-
 //have the pieces show up on the board and change the turn
+// once we click on a circle, what do we want it to do
 function renderCircles() {
-  // check to see if game is over
-  if (winner) return;
-
-  const circleDiv = document.createElement('div');
-  // check to see whose turn is it
-  if (turn === 1) {
-    message.textContent = `Player ${turn}'s turn`;
-    circleDiv.classList.add('red');
-    turn * -1;
+  if (turn === playerOne) {
+    this.classList.add('red');
+    turn = playerTwo;
+  }
+  else if (turn === playerTwo) {
+    this.classList.add('yellow');
+    turn = playerOne;
   }
 }
