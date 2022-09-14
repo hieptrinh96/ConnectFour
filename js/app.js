@@ -1,82 +1,45 @@
 /*-------------------------------- Constants --------------------------------*/
 
-const rows = 6;
-const columns = 7;
-const rowArr = [];
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-let gameBoard;
-let playerOne = 'red';
-let turn = playerOne;
-let playerTwo = 'yellow';
-let gameComplete = false;
-let lastColumn = [];
-/*------------------------ Cached Element References ------------------------*/
 
-const board = document.querySelector('.game-board');
-const cells = document.getElementsByClassName('cell');
-const winner = document.getElementById('winner');
-const message = document.getElementById('message')
+let playerOne = 'red';
+let playerTwo = 'yellow';
+let current = playerOne;
+
+/*------------------------ Cached Element References ------------------------*/
+const titlePage = document.querySelector('.title-page')
+const gameBoard = document.querySelector('.game-board');
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 
 /*-------------------------------- Functions --------------------------------*/
 init();
 function init() {
-  gameBoard = [];
-  lastColumn = [5, 5, 5, 5, 5, 5, 5]
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns; j++) {
-      rowArr.push(' ');
-      const divElement = document.createElement('div');
-      divElement.id = `${i}, ${j}`;
-      divElement.classList.add('cell');
-      divElement.addEventListener('click', renderCircles)
-      board.appendChild(divElement);
-    }
-  }
-  gameBoard.push(rowArr)
-}
-
-function renderCircles() {
-  if (winner) return;
-
-  let pairs = this.id.split(',');
-  let row = parseInt(pairs[0]);
-  let column = parseInt(pairs[1]);
-  r = lastColumn[column];
-
-  if (row < 0) return;
-  gameBoard[row][column] = turn;
-  const puck = document.getElementById(`${row}, ${column}`);
-  if (turn === playerOne) {
-    puck.classList.add('red');
-    turn = playerTwo;
-  }
-  else {
-    puck.classList.add('yellow');
-    turn = playerOne;
-  }
-  row -= 1;
-  winningCombos();
-}
-
-function winningCombos() {
-  for (let i = 0; i < rows; i++) {
-    for (let j = 0; j < columns - 3; j++) {
-      if (gameBoard[i][j] !== ' ') {
-        if (gameBoard[i][j] === gameBoard[i + 1][j + 1] && gameBoard[i + 2][j + 2] === gameBoard[i + 3][j + 3]) {
-          getWinner(i, j);
-          return;
-        }
-      }
+  for (let i = 0; i < 42; i++) {
+    const divElements = document.createElement('div');
+    divElements.classList.add('cell');
+    gameBoard.appendChild(divElements)
+    divElements.onmouseenter = () => {
+      columnMaker(i % 7);
     }
   }
 }
 
-function getWinner(i, j) {
-  if (gameBoard[i][j] === playerOne) winner.textContent = 'Player One Wins!';
-  else winner.textContent = 'Player Two Wins!';
-  gameComplete = true;
+function eraseCircle() {
+  let removedCircle = document.querySelector('[data-placed=false]')
+  if (removedCircle) removedCircle.parentElement.removeChild(removedCircle)
 }
+
+function columnMaker(column) {
+  eraseCircle();
+  let divElements = gameBoard.children[column];
+  let circle = document.createElement('div');
+  circle.className = 'circle';
+  circle.dataset.placed = false;
+  divElements.appendChild(circle);
+
+}
+
