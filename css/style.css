@@ -16,7 +16,7 @@ body {
 }
 
 .cell {
-  border: 5px solid #82A0AA;
+  border: 1px solid #82A0AA;
   border-radius: 50%;
   background-color: white;
   margin: 5px;
