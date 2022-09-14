@@ -1,6 +1,23 @@
-#game-board {
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 630px;
+  height: 540px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(6, 1fr);
+  background-color: aquamarine;
+  padding: 10px;
+}
 
+.cell {
+  border: 5px solid #82A0AA;
+  border-radius: 50%;
+  background-color: white;
+  margin: 5px;
 }
