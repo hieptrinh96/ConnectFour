@@ -5,27 +5,27 @@ const columns = 7;
 
 /*---------------------------- Variables (state) ----------------------------*/
 
-let colArr = [5, 5, 5, 5, 5, 5, 5];
 let playerOne = 'blue';
 let playerTwo = 'yellow';
 let current = playerOne;
 let gameComplete = false;
+let colArr = [5, 5, 5, 5, 5, 5, 5];
 let board = [];
 let divs;
 
 /*------------------------ Cached Element References ------------------------*/
 
 const gameBoard = document.querySelector('.game-board')
-const resetButton = document.getElementById('reset')
 const cells = document.getElementsByClassName('cell');
 const startButton = document.getElementById('start-button');
+const resetButton = document.getElementById('reset-button')
 
 /*-------------------------------EventListeners--------------------------------*/
 
 startButton.addEventListener('click', init);
+resetButton.addEventListener('click', resetBoard);
 window.addEventListener('keydown', gameStarter);
 window.addEventListener('keydown', gameReset)
-resetButton.addEventListener('click', resetBoard);
 
 /*-------------------------------- Functions --------------------------------*/
 
