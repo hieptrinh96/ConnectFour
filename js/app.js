@@ -12,19 +12,16 @@ let gameComplete = false;
 let colArr = [];
 let board;
 
-
-
 /*------------------------ Cached Element References ------------------------*/
 
 const gameBoard = document.querySelector('.game-board')
 
-/*----------------------------- Event Listeners -----------------------------*/
-
-
 /*-------------------------------- Functions --------------------------------*/
 init();
+
 function init() {
   board = [];
+
   colArr = [5, 5, 5, 5, 5, 5, 5];
 
   for (let i = 0; i < rows; i++) {
@@ -53,21 +50,23 @@ function renderCircles() {
 
   board[row][col] = current;
   let piece = document.getElementById(row.toString() + ',' + col.toString());
+
   if (current === playerOne) {
-    piece.classList.add('red');
+    piece.classList.add('blue');
     current = playerTwo;
   }
+
   else {
     piece.classList.add('yellow');
     current = playerOne;
   }
+
   row -= 1;
   colArr[col] = row;
   getWinner();
 }
 
 function getWinner() {
-
   // checks horizontally 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns - 3; j++) {
@@ -117,8 +116,8 @@ function getWinner() {
 function setWinner(i, j) {
   let winner = document.getElementById('winner');
   if (board[i][j] === playerOne) {
-    winner.textContent = 'Player One Wins';
+    winner.textContent = 'Player One Wins!';
   }
-  else winner.textContent = 'Player Two Wins';
+  else winner.textContent = 'Player Two Wins!';
   gameComplete = true;
 }

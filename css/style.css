@@ -6,7 +6,7 @@ body {
   height: 540px;
   width: 630px;
   /* background-color: white; */
-  border: 10px solid aquamarine;
+  border: 5px solid #7fffd4;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -18,11 +18,11 @@ body {
   margin: 5px;
   background-color: white;
   border-radius: 50%;
-  border: 5px solid aquamarine;
+  border: 5px solid#3BB3B7;
 }
 
-.red {
-  background-color: red;
+.blue {
+  background-color: #00C5E6;
 }
 
 .yellow {
