@@ -1,15 +1,20 @@
 body {
   text-align: center;
+  font-family: 'Ms Madi', cursive;
+  font-size: 2em;
 }
 
 .game-board {
+  /* text-align: center; */
   height: 540px;
   width: 630px;
   /* background-color: white; */
-  border: 5px solid #7fffd4;
+  border: 5px solid #00AAA9;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  background-color: #28161C;
 }
 
 .cell {
@@ -18,11 +23,11 @@ body {
   margin: 5px;
   background-color: white;
   border-radius: 50%;
-  border: 5px solid#3BB3B7;
+  border: 2px solid #00AAA9;
 }
 
 .blue {
-  background-color: #00C5E6;
+  background-color: #00AAA9;
 }
 
 .yellow {
