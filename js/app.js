@@ -5,16 +5,20 @@ const columns = 7;
 
 /*---------------------------- Variables (state) ----------------------------*/
 
+let colArr = [5, 5, 5, 5, 5, 5, 5];
 let playerOne = 'blue';
 let playerTwo = 'yellow';
 let current = playerOne;
 let gameComplete = false;
-let colArr = [];
 let board;
 
 /*------------------------ Cached Element References ------------------------*/
 
 const gameBoard = document.querySelector('.game-board')
+const resetButton = document.getElementById('reset')
+
+/*-------------------------------EventListeners--------------------------------*/
+
 
 /*-------------------------------- Functions --------------------------------*/
 init();
@@ -22,8 +26,6 @@ init();
 function init() {
   // arr will hold the corresponding divs
   board = [];
-
-  colArr = [5, 5, 5, 5, 5, 5, 5];
 
   // iterate through rows and columns to create the divs
   for (let i = 0; i < rows; i++) {
@@ -50,8 +52,9 @@ function renderCircles() {
   let pairs = this.id.split(',');
   let row = parseInt(pairs[0]);
   let col = parseInt(pairs[1]);
+  // sets the row to the height of column
   row = colArr[col];
-
+  // if a column fills up, return so we can't put more in the same column
   if (row < 0) return;
   // sets our current coordinate to a color
   board[row][col] = current;
@@ -66,7 +69,7 @@ function renderCircles() {
     piece.classList.add('yellow');
     current = playerOne;
   }
-
+  // as we put in a piece, decrease the row height by 1
   row -= 1;
   colArr[col] = row;
   getWinner();
