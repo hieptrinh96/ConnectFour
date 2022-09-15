@@ -30,3 +30,4 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
  - [ ] Implement a reset button that will restart the game.
  - [ ] Implement animations to have the pieces hover over each column.
  - [ ] Implement a darkmode with a button 
+ - [ ] Implement a score tracker for both players

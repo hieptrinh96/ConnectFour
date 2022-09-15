@@ -62,12 +62,10 @@ function renderCircles() {
     piece.classList.add('blue');
     current = playerTwo;
   }
-
   else {
     piece.classList.add('yellow');
     current = playerOne;
   }
-
   row -= 1;
   colArr[col] = row;
   getWinner();
