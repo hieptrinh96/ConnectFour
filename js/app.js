@@ -10,13 +10,13 @@ let playerOne = 'blue';
 let playerTwo = 'yellow';
 let current = playerOne;
 let gameComplete = false;
-let board;
+let board, divs;
 
 /*------------------------ Cached Element References ------------------------*/
 
 const gameBoard = document.querySelector('.game-board')
 const resetButton = document.getElementById('reset')
-
+const cells = document.getElementsByClassName('cell');
 /*-------------------------------EventListeners--------------------------------*/
 
 
@@ -37,13 +37,21 @@ function init() {
       // add cell class for styling
       circle.classList.add('cell');
       // allows access to each div created
-      circle.addEventListener('click', renderCircles);
       gameBoard.appendChild(circle);
     }
     // pushes empty strings as placeholders for our arr
     board.push(rowArr);
   }
+  circleCreator();
 }
+// converts all the divs into an array and adds an eventListener to each one
+function circleCreator() {
+  divs = Array.from(cells);
+  divs.forEach(div => {
+    div.addEventListener('click', renderCircles);
+  })
+}
+
 
 function renderCircles() {
   // if there is a winner, don't allow anymore clicks

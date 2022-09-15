@@ -9,8 +9,6 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
 
 # Technologies Used
 
-  ## Connect Four was made with:
-
   - HTML
     - Google Fonts
   - CSS
