@@ -36,7 +36,7 @@ function init() {
       circle.id = `${i}, ${j}`;
       // add cell class for styling
       circle.classList.add('cell');
-      // allows access to each div created
+      // appends circle div to gameBoard
       gameBoard.appendChild(circle);
     }
     // pushes empty strings as placeholders for our arr
