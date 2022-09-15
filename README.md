@@ -17,7 +17,7 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
     - Flex, Grid
   - JavaScript
     - Arrays, DOMs, Functions
-
+  - Favicon was created using [Canva](https://www.canva.com/)
   ## Version Control:
 
   - [GitHub](https://github.com/hieptrinh96/ConnectFour)

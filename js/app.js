@@ -52,7 +52,6 @@ function circleCreator() {
   })
 }
 
-
 function renderCircles() {
   // if there is a winner, don't allow anymore clicks
   if (gameComplete) return;
