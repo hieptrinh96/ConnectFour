@@ -6,10 +6,8 @@ body {
 }
 
 .game-board {
-  /* text-align: center; */
   height: 540px;
   width: 630px;
-  /* background-color: white; */
   border: 5px solid #00AAA9;
   margin: 0 auto;
   display: flex;
