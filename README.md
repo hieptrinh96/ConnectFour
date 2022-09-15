@@ -5,7 +5,7 @@ Connect Four was one of the few games that I enjoyed playing as a kid. Some of m
 
 # Instruction
 
-You start off with a board layout of 6 rows and 7 columns. The game is setup in a way that two players are able to play at a time. Each person makes one move per turn represented by two colors: Blue and Yellow. The winner will be the player that gets 4 in a row. Players can get 4 in a row by having their color lined up vertically, horizontally, diagonally, and reverse-diagonally.
+You start off with a board layout of 6 rows and 7 columns. The game is setup in a way that two players are able to play at a time. Each person makes one move per turn represented by two colors: Blue and Yellow. A player wins the game once they get 4 in a row. Players can get 4 in a row by having their color lined up vertically, horizontally, diagonally, and reverse-diagonally.
 
 # Technologies Used
 
@@ -27,5 +27,5 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
   
 
 # Icebox:
- - [ ] (Implement a reset button that will restart the game.)
- - [ ] (Implement animations to have the pieces hover over each column)
+ - [ ] Implement a reset button that will restart the game.
+ - [ ] Implement animations to have the pieces hover over each column.
