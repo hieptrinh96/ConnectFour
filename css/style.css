@@ -1,8 +1,5 @@
-html {
-  background-image: linear-gradient(to right top, #7e7da5, #b283a2, #d39091, #d9a982, #c6c78b);
-}
-
 body {
+  background-image: linear-gradient(to right top, #7e7da5, #b283a2, #d39091, #d9a982, #c6c78b);
   text-align: center;
   font-family: 'Ms Madi', cursive;
   font-size: 2em;
@@ -37,4 +34,12 @@ body {
 
 .yellow {
   background-color: #ffff00;
+}
+
+#winner {
+  margin: 20px;
+}
+
+.title-page {
+  margin: 20px;
 }
