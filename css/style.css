@@ -1,3 +1,7 @@
+html {
+  background-image: linear-gradient(to right top, #7e7da5, #b283a2, #d39091, #d9a982, #c6c78b);
+}
+
 body {
   text-align: center;
   font-family: 'Ms Madi', cursive;
@@ -15,21 +19,22 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   background-color: #28161C;
+  background-image: linear-gradient(to left bottom, #00a8a8, #00bea5, #25d295, #67e47a, #a5f356, #ceeb5a, #ebe368, #ffdc7d, #ffd5b0, #ffdee5, #fff0ff, #ffffff);
 }
 
 .cell {
   height: 70px;
   width: 70px;
   margin: 5px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 50%;
   border: 2px solid #00AAA9;
 }
 
 .blue {
-  background-color: #00AAA9;
+  background-color: #00a8a8;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #ffff00;
 }
