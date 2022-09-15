@@ -1,5 +1,8 @@
 body {
   background-image: linear-gradient(to right top, #7e7da5, #b283a2, #d39091, #d9a982, #c6c78b);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   text-align: center;
   font-family: 'Ms Madi', cursive;
   font-size: 2em;
@@ -26,6 +29,10 @@ body {
   border: 2px solid #00AAA9;
 }
 
+.cell:hover {
+  border: 2px solid black;
+}
+
 .blue {
   background-color: #00a8a8;
 }
@@ -40,4 +47,10 @@ body {
 
 .title-page {
   margin: 20px;
+}
+
+#start-button {
+  font-family: 'Cairo Play', cursive;
+  font-size: 20px;
+  font-weight: bold;
 }
