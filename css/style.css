@@ -1,26 +1,24 @@
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+  text-align: center;
 }
 
 .game-board {
-  width: 630px;
   height: 540px;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  background-color: aquamarine;
-  padding: 78px 10px 10px 10px;
+  width: 630px;
+  /* background-color: white; */
+  border: 10px solid aquamarine;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cell {
-  display: flex;
-  border: 1px solid #82A0AA;
-  border-radius: 50%;
-  background-color: white;
+  height: 70px;
+  width: 70px;
   margin: 5px;
+  background-color: white;
+  border-radius: 50%;
+  border: 5px solid aquamarine;
 }
 
 .red {
@@ -29,14 +27,4 @@ body {
 
 .yellow {
   background-color: yellow;
-}
-
-.circle {
-  flex-grow: 1;
-  border-radius: 50%;
-  background-color: red;
-}
-
-.circle[data-placed="false"] {
-  transform: translateY(-88px);
 }
