@@ -18,12 +18,10 @@ let divs;
 const gameBoard = document.querySelector('.game-board')
 const cells = document.getElementsByClassName('cell');
 const startButton = document.getElementById('start-button');
-const resetButton = document.getElementById('reset-button')
 
 /*-------------------------------EventListeners--------------------------------*/
 
 startButton.addEventListener('click', init);
-resetButton.addEventListener('click', resetBoard);
 window.addEventListener('keydown', gameStarter);
 window.addEventListener('keydown', gameReset)
 
@@ -162,6 +160,7 @@ function resetBoard() {
     for (let j = 0; j < columns; j++) {
       if (board[i][j]) {
         board[i][j] = ' ';
+        winner.textContent = '';
       }
     }
   }
