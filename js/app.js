@@ -19,6 +19,7 @@ let tie = 'tie'
 const gameBoard = document.querySelector('.game-board')
 const cells = document.getElementsByClassName('cell');
 const startButton = document.getElementById('start-button');
+const connectFourSound = new Audio('./assets/pieces-falling.mp3');
 
 /*-------------------------------EventListeners--------------------------------*/
 
@@ -61,10 +62,12 @@ function renderCircles() {
   let piece = document.getElementById(`${row}, ${col}`);
 
   if (current === playerOne) {
+    piecesFallingAudio();
     piece.classList.add('blue');
     current = playerTwo;
   }
   else {
+    piecesFallingAudio();
     piece.classList.add('yellow');
     current = playerOne;
   }
@@ -177,3 +180,7 @@ function resetBoard() {
     }
   }
 }
+
+function piecesFallingAudio() {
+  connectFourSound.play();
+} 
