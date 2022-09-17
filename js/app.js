@@ -21,7 +21,7 @@ const cells = document.getElementsByClassName('cell');
 const startButton = document.getElementById('start-button');
 const connectFourSound = new Audio('./assets/pieces-falling.mp3');
 const resetAudio = new Audio('./assets/reset-audio.mp3');
-
+const indicator = document.getElementById('indicator');
 /*-------------------------------EventListeners--------------------------------*/
 
 startButton.addEventListener('click', init);
@@ -50,6 +50,7 @@ function init() {
 }
 
 function renderCircles() {
+  indicator.hidden = false;
   if (gameComplete) return;
 
   let row;
@@ -161,6 +162,7 @@ function gameReset(evt) {
 }
 
 function resetBoard() {
+  indicator.setAttribute('hidden', true);
   resetAudio.volume = .2;
   resetAudio.play();
   colArr = [5, 5, 5, 5, 5, 5, 5];
