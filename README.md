@@ -18,13 +18,12 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
   - JavaScript
     - Arrays, DOMs, Functions
   - Favicon was created using [Canva](https://www.canva.com/)
-  ## Version Control:
-
-  - [GitHub](https://github.com/hieptrinh96/ConnectFour)
 
 ### Deployment:
 - [Netlify](https://app.netlify.com)
   
+### Credits
+- Sound of Connect Four pieces falling can be found [here] (https://freesound.org/people/discokingmusic/sounds/271387/)
 
 # Icebox:
  - [ ] Implement animations to have the pieces hover over each column.

@@ -12,6 +12,7 @@ let gameComplete = false;
 let colArr = [5, 5, 5, 5, 5, 5, 5];
 let board = [];
 let divs;
+let tie = 'tie'
 
 /*------------------------ Cached Element References ------------------------*/
 
@@ -73,6 +74,8 @@ function renderCircles() {
 }
 
 function getWinner() {
+  let winner = document.getElementById('winner');
+
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns - 3; j++) {
       if (board[i][j] !== ' ') {
@@ -124,15 +127,24 @@ function getWinner() {
       }
     }
   }
+  const tieChecker = board.every(cell => cell === 'blue' || cell === 'yellow');
+  console.log(tieChecker);
+  if (tieChecker) {
+    winner.textContent = 'Looks like a Tie!';
+    gameComplete = true;
+
+  }
 }
 
 function setWinner(i, j) {
   let winner = document.getElementById('winner');
+
   if (board[i][j] === playerOne) {
     winner.textContent = 'Player One Wins!';
   }
   else if (board[i][j] === playerTwo) winner.textContent = 'Player Two Wins!';
   else winner.textContent = 'Looks like a Tie!'
+
   gameComplete = true;
 }
 
