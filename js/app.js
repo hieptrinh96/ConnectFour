@@ -20,6 +20,7 @@ const gameBoard = document.querySelector('.game-board')
 const cells = document.getElementsByClassName('cell');
 const startButton = document.getElementById('start-button');
 const connectFourSound = new Audio('./assets/pieces-falling.mp3');
+const resetAudio = new Audio('./assets/reset-audio.mp3');
 
 /*-------------------------------EventListeners--------------------------------*/
 
@@ -160,6 +161,8 @@ function gameReset(evt) {
 }
 
 function resetBoard() {
+  resetAudio.volume = .2;
+  resetAudio.play();
   colArr = [5, 5, 5, 5, 5, 5, 5];
   current = playerOne;
   gameComplete = false;

@@ -23,7 +23,8 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
 - [Netlify](https://app.netlify.com)
   
 ### Credits
-- Sound of Connect Four pieces falling can be found [here] (https://freesound.org/people/discokingmusic/sounds/271387/)
+- Sound of a single Connect Four piece falling can be found [here] (https://freesound.org/people/discokingmusic/sounds/271387/)
+- Sound of all pieces falling down can be found [here](https://freesound.org/people/boosmyller/sounds/436102/)
 
 # Icebox:
  - [ ] Implement animations to have the pieces hover over each column.
