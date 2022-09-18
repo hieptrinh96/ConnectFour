@@ -80,6 +80,15 @@ function renderCircles() {
 
 function getWinner() {
   let winner = document.getElementById('winner');
+  let trueCount = 0;
+
+  board.forEach(row => {
+    if (row.every(circle => circle !== ' ')) trueCount += 1;
+  })
+  if (trueCount === 6) {
+    winner.textContent = 'Looks like a Tie!';
+    gameComplete = true;
+  }
 
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns - 3; j++) {
@@ -132,14 +141,8 @@ function getWinner() {
       }
     }
   }
-  const tieChecker = board.every(cell => cell === 'blue' || cell === 'yellow');
-  console.log(tieChecker);
-  if (tieChecker) {
-    winner.textContent = 'Looks like a Tie!';
-    gameComplete = true;
-
-  }
 }
+
 
 function setWinner(i, j) {
   let winner = document.getElementById('winner');

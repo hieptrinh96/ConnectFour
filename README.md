@@ -17,12 +17,12 @@ You start off with a board layout of 6 rows and 7 columns. The game is setup in 
     - Flex, Grid
   - JavaScript
     - Arrays, DOMs, Functions
-  - Favicon was created using [Canva](https://www.canva.com/)
 
 ### Deployment:
 - [Netlify](https://app.netlify.com)
   
 ### Credits
+  - Favicon was created using [Canva](https://www.canva.com/)
 - Sound of a single Connect Four piece falling can be found [here](https://freesound.org/people/discokingmusic/sounds/271387/)
 - Sound of all pieces falling down can be found [here](https://freesound.org/people/boosmyller/sounds/436102/)
 
